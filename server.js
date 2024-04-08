@@ -1,6 +1,6 @@
 const express = require("express");
 const morgan = require("morgan"); // to view the api process timing
-require("dotenv").config({ path: [".env.prod", ".env"] });
+require("dotenv").config();
 
 const productRouter = require("./controller/productCtrl");
 
@@ -40,5 +40,5 @@ app.use("*", (req, res) => {
 });
 
 app.listen("3003", () => {
-  console.log("Node running on", process.env.PORT, process.env.auth);
+  console.log("Node running on", process.env.PORT);
 });
