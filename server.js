@@ -1,6 +1,6 @@
 const express = require("express");
 const morgan = require("morgan"); // to view the api process timing
-require("dotenv").config();
+require("dotenv").config({ path: [".env.dev", ".env"] });
 
 const productRouter = require("./controller/productCtrl");
 
